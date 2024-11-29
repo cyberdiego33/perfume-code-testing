@@ -1,0 +1,119 @@
+/* - Very dark blue: hsl(212, 21%, 14%)
+- Dark grayish blue: hsl(228, 12%, 48%)
+
+- Dark cyan: hsl(158, 36%, 37%)
+- Cream: hsl(30, 38%, 92%) body b-c
+
+- White: hsl(0, 0%, 100%) container b-c */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Fraunces:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    justify-items: center;
+    align-content: center;
+    background-color: hsl(30, 38%, 92%);
+}
+#container {
+    display: flex;
+    width: 500px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+}
+#image,
+#content {
+    width: 50%;
+}
+#image{
+    background-image: url('images/image-product-desktop.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px 0 0 10px;
+}
+#content {
+    padding: 1.5rem;
+}
+#perfume p,
+#floral p,
+#prices p,
+#chart {
+    color: hsl(228, 12%, 48%);
+    font-family: 'Montserrat';
+    font-size: 14px;
+}
+#perfume {
+    padding-bottom: 0.5rem;
+}
+h1 {
+    line-height: 2rem;
+    padding: 0.3em 0;
+    font-family: 'Fraunces';
+    font-weight: bold;
+}
+#floral{
+    padding: 0.5rem 0;
+}
+#prices {
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    color: hsl(158, 36%, 37%);
+}
+#prices span{
+    font-size: 1.7rem;
+    font-weight: bold;
+    font-family: 'Fraunces';
+}
+#chart {
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+    padding: 1em 0;
+    margin: 0.5rem 0;
+    text-align: center;
+    border-radius: 5px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 0.7rem;
+}
+@media (max-width: 430px) {
+    * {
+        box-sizing: border-box;
+    }
+    html {
+        font-size: 20px;
+    }
+    body {
+        padding: 2em;
+    }
+    #container {
+        width: 100%;
+        height: 90%;
+        flex-direction: column;
+        border-radius: 10px;
+    }
+    #image {
+        width: 100%;
+        height: 50%;
+        background-image: url('images/image-product-mobile.jpg');
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px 10px 0 0 ;
+    }
+    #content {
+        width: 100%;
+        height: 50%;
+        height: auto;
+    }
+}
+@media (max-width: 375px) {
+    html {
+        font-size: 16px;
+    }
+}
